@@ -30,8 +30,7 @@ header {
 	width: 12vh;
 	display: block;
 	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-		
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);	
 }
 header .name {
 	display: flex;
@@ -43,7 +42,45 @@ header .name {
 	justify-content: center;
 	text-shadow: 1px 0px 1px rgba(0,0,0,0.20);
 }
-
+/*header timeline*/
+.timeline.hc {
+	display: block;
+	width: 52vh;
+}
+#portrait.timeline {
+	padding-top: 1vh;
+	width: 8.5vh;
+	margin: 0px;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	margin-left: 4vh;
+}
+#portrait.timeline img {
+	height: inherit;
+	width: inherit;
+}
+header .name.timeline {
+	display: inline-block;
+	color: rgba(255,255,255,0.15);
+	font-size: 13vh;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	justify-content: center;
+	text-shadow: 0px 0px 0px rgba(0,0,0,0.00);
+	position: relative;
+	line-height: 80%;
+}
+header .name.timeline.n{
+	margin: 0px;
+	display: block;
+	float: right;
+}
+header .name.timeline.sn{
+	margin: 0px;
+	vertical-align: top;
+	float: right;
+}
 /*content*/
 #content {
 	background : #4E7AC6;
