@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+#timeline-content {
+	height: 12vw;
+	width: 81vw;
+	margin: 0 auto 0 auto;
+	top: 1vw;
+	position: relative;
+}
+#timeline-content .line {
+	position: absolute;
+	width: 80vw;
+	height: 2.51vw;
+	z-index: 0;
+	left: 0.5vw;
+	top:40%;
+}
+.points-container {
+	z-index: 1;
+	width: inherit;
+	position: absolute;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.part {
+	height: 10vw;
+/*	width: 7vw;*/
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+.part.one {
+/*	flex-grow: 1;*/
+}
+.master-point {
+	width: 12vw;
+}
+.master-point.first {
+}
+.master-point.middle {
+}
+.master-point.last {
+}
