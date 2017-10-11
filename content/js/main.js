@@ -12,6 +12,8 @@ $(function(){
 		}
 		
 		loadContent($('header'), "timeline.html header > *");
-		loadContent($('#content'), "timeline.html #timeline-content");		
+		loadContent($('#content'), "timeline.html #timeline-content");
+		
+		$.getScript("content/js/timeline.js");
 	});
 });
