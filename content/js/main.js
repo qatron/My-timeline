@@ -3,20 +3,15 @@ $(function(){
 	"use strict";
 	$('.main-title').click(()=>{
 		
-		let header = $('header');
-		header.children().fadeOut(()=>{
-			header.load("timeline.html header > *", ()=>{
-				header.children().hide().fadeIn();
+		function loadContent(target, source) {
+			target.children().fadeOut('slow', ()=>{
+				target.load(source, ()=>{
+					target.children().hide().fadeIn('slow');
+				});
 			});
-		});
+		}
 		
-		let content = $('#content');
-		content.children().fadeOut(()=>{
-			content.load("timeline.html #timeline-content", ()=>{
-				content.children().hide().fadeIn();
-			});
-		});
-		
-		
+		loadContent($('header'), "timeline.html header > *");
+		loadContent($('#content'), "timeline.html #timeline-content");		
 	});
 });
