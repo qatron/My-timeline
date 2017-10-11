@@ -45,16 +45,16 @@ header .name {
 /*header timeline*/
 .timeline.hc {
 	display: block;
-	width: 52vh;
+	width: 50vh;
+	height: auto;
 }
 #portrait.timeline {
 	padding-top: 1vh;
 	width: 8.5vh;
-	margin: 0px;
-	padding: 0;
 	position: relative;
 	display: inline-block;
 	margin-left: 4vh;
+	bottom: 0.4vh
 }
 #portrait.timeline img {
 	height: inherit;
@@ -63,22 +63,28 @@ header .name {
 header .name.timeline {
 	display: inline-block;
 	color: rgba(255,255,255,0.15);
-	font-size: 13vh;
-	font-weight: 600;
+	font-size: 12.8vh;
+	font-weight: 700;
 	font-family: 'Open Sans', sans-serif;
-	justify-content: center;
 	text-shadow: 0px 0px 0px rgba(0,0,0,0.00);
 	position: relative;
-	line-height: 80%;
+	line-height: 76%;
+	box-sizing: border-box;
 }
 header .name.timeline.n{
 	margin: 0px;
 	display: block;
+	vertical-align: top;
 	float: right;
+}
+header .name.timeline.bottom {
+	height: 50%;
+	width: 100%;
 }
 header .name.timeline.sn{
 	margin: 0px;
 	vertical-align: top;
+	line-height: inherit;
 	float: right;
 }
 /*content*/
@@ -89,12 +95,18 @@ header .name.timeline.sn{
 	height: 75%;
 }
 #content .main-title {
-	width: auto;
-	height: 100%;
+	position: relative;
+	top: 25vh;
+	margin: auto;
+	height: 6vw;
+	width: 65vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+}
+
+#content .main-title:hover {
+	cursor: pointer;
 }
 
 #content .main-title span{
