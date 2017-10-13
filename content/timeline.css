@@ -29,6 +29,7 @@
 	flex-grow: 0;
 	flex-shrink: 1;
 	flex-basis: auto;
+	transition: all 0.5s;
 }
 .part.one {
 /*	flex-grow: 1;*/
