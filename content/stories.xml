@@ -3,47 +3,59 @@
 <stories>
 
 	<birth>
-		<start-year></start-year>
 		<!--story 1-->
 		<story>
-			<year></year>
-			
+			<year>story one date</year>
+			<content>
+				story one content
+			</content>
+		</story>
+		<!--story 2-->
+		<story>
+			<year>story two date</year>
+			<content>
+				story two content
+			</content>
 		</story>
 	</birth>
 	
 	<pdst>
-		<start-year></start-year>
 		<!--story 1-->
 		<story>
 			<year></year>
-			
+			<content>
+				
+			</content>
 		</story>
 	</pdst>
 	
 	<gim>
-		<start-year></start-year>
 		<!--story 1-->
 		<story>
 			<year></year>
-			
+			<content>
+				
+			</content>
 		</story>
 	</gim>
 	
 	<lic>
-		<start-year></start-year>
 		<!--story 1-->
 		<story>
 			<year></year>
-			
+			<content>
+				
+			</content>
 		</story>
 	</lic>
 	
 	<uni>
-		<start-year></start-year>
 		<!--story 1-->
 		<story>
 			<year></year>
-			
+			<content>
+				
+			</content>
 		</story>
 	</uni>
 	
