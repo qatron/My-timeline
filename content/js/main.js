@@ -6,13 +6,14 @@ $(function(){
 		function loadContent(target, source, callback) {
 			target.children().fadeOut('slow', ()=>{
 				target.load(source, ()=>{
-					target.children().hide().fadeIn('slow', callback);
+					target.children().hide().fadeIn('slow', callback());
+					console.log(target);
 				});
 			});
 		}
 		
-		loadContent($('header'), "timeline.html header > *");
-		loadContent($('#content'), "timeline.html #timeline-content", ()=>{$.getScript("content/js/timeline.js");});
+		loadContent($('header'), "timeline.html header > *", ()=>{});
+		loadContent($('#content'), "timeline.html #content > *", function(){$.getScript("content/js/timeline.js");});
 		
 	});
 });
