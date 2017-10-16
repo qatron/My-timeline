@@ -1,19 +1,25 @@
 // JavaScript Document
 $(function(){
 	"use strict";
-	$('.main-title').click(()=>{
+	
+	function loadContent(target, file, source, callback) {
 		
-		function loadContent(target, source, callback) {
-			target.children().fadeOut('slow', ()=>{
-				target.load(source, ()=>{
-					target.children().hide().fadeIn('slow', callback());
-					console.log(target);
+		target.children().fadeOut('slow').promise().done(()=>{
+			$.get(file, function(data){
+				let content = $($.parseHTML(data));
+				content = content.find(source).children().add(content.filter(source).children());
+				console.log(content);
+				content.hide();
+				target.html(content).children().fadeIn('slow', ()=>{
+					if($.isFunction(callback)) {callback();}
 				});
 			});
-		}
-		
-		loadContent($('header'), "timeline.html header > *", ()=>{});
-		loadContent($('#content'), "timeline.html #content > *", function(){$.getScript("content/js/timeline.js");});
-		
+		});
+			
+	}
+	
+	$('.main-title').click(()=>{
+		loadContent($('header'), "timeline.html", "header");
+		loadContent($('#content'), "timeline.html", "#content", function(){$.getScript("content/js/timeline.js");});
 	});
 });
