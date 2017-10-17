@@ -2,7 +2,7 @@
 /* CSS Document */
 #timeline-content {
 	height: 12vw;
-	width: 81vw;
+	width: 78vw;
 	margin: 0 auto 0 auto;
 	top: 5vh;
 	position: relative;
@@ -72,6 +72,8 @@
 .story.text {
     width: 100%;
 	height: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 120%;
 	/*
 	width: 50vw;
 	height: 20vh;
