@@ -1,19 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
+#timeline {
+	width: 100vw;
+	height: 12vw;
+	display: inline-flex;
+	justify-content: center;
+}
 #timeline-content {
 	height: 12vw;
-	width: 78vw;
-	margin: 0 auto 0 auto;
+	width: 80vw;
 	top: 5vh;
 	position: relative;
+	display: inline-flex;
+	align-content: center;
+	justify-content: center;
 }
 #timeline-content .line {
-	position: absolute;
+	margin: auto;
 	width: 80vw;
-	height: 2.51vw;
 	z-index: 0;
-	left: 0.5vw;
-	top:40%;
 }
 .points-container {
 	z-index: 1;
@@ -51,6 +56,29 @@
 }
 .master-point.last {
 }
+
+.dates {
+	top: 3vh;
+	position: relative;
+	width: 97vw;
+	display: inline-flex;
+	align-content: center;
+	justify-content: center;
+	
+}
+.dates.content {
+	width: 72vw;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.dates.content div {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 3vw;
+	color: white;
+}
+
 .story {
 	display: flex;
 	align-content: center;

@@ -147,6 +147,13 @@ $(function(){
 				timeline.partActivate(that.index()/2);
 			});
 			
+			function hideDates() {
+				let dates = $('.dates');
+				dates.fadeOut('slow', ()=>{dates.remove();});
+				items.unbind('click', hideDates);
+			}
+			items.click(hideDates);
+			
 		}
 	};
 	timeline.partsInit();
