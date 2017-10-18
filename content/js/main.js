@@ -1,7 +1,9 @@
 // JavaScript Document
 $(function(){
 	"use strict";
-	screen.orientation.lock('landscape');
+	screen.orientation.lock('landscape').catch(()=>{
+		console.log('Landscape orientation lock impossible.');
+	});
 	
 	function loadContent(target, file, source, callback) {
 		
@@ -11,7 +13,7 @@ $(function(){
 				content = content.find(source).children().add(content.filter(source).children());
 				console.log(content);
 				content.hide();
-				target.html(content).children().fadeIn('slow', ()=>{
+				target.html(content).children().fadeIn('slow').promise().done(()=>{
 					if($.isFunction(callback)) {callback();}
 				});
 			});
