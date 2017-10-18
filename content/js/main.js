@@ -1,6 +1,7 @@
 // JavaScript Document
 $(function(){
 	"use strict";
+	screen.orientation.lock('landscape');
 	
 	function loadContent(target, file, source, callback) {
 		
