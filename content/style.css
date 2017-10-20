@@ -45,9 +45,9 @@ header .name {
 }
 /*header timeline*/
 .timeline.hc {
-	display: block;
+	display: inline-block;
 	width: 50vh;
-	height: auto;
+	height: 100%;
 }
 #portrait.timeline {
 	padding-top: 1vh;
@@ -87,6 +87,45 @@ header .name.timeline.sn{
 	vertical-align: top;
 	line-height: inherit;
 	float: right;
+}
+.timeline.hright {
+	display: inline-block;
+	width: 45.5Vh;
+	height: 20vh;
+	float: right;
+	overflow: hidden;
+	margin-right: 1vh;
+}
+.hright.row {
+	display: inline-block;
+	height: 4.1vh;
+	width: 80%;
+	margin-top: 0.5vh;
+}
+.hright.top {
+	display: block;
+	width: 100%;
+}
+.hright img {
+	height: 100%;
+	display: inline-block;
+	margin-right: 1vh;
+}
+.hright.right {
+	height: auto;
+	width: 9.5%;
+	float: right;
+	margin-right: 1vh;
+}
+.hright.right img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 0.5vh;
+	margin-right: 0;
+}
+.hright.row2 img:last-of-type {
+	margin-right: 0;
 }
 /*content*/
 #content {
