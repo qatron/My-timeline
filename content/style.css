@@ -147,6 +147,7 @@ header .name.timeline.sn{
 
 #content .main-title:hover {
 	cursor: pointer;
+	text-shadow: 0px 0px 18px rgba(53,71,140,1.00);
 }
 
 #content .main-title span{
