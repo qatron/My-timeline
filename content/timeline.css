@@ -44,17 +44,19 @@
 	height: 1.5vw;
 	background: rgba(127,177,239,1.00);
 	border-radius: 50%;
-	border: 0.05vw solid rgba(173, 214, 247, 0.80);
 	display: none;
+}
+.point:hover {
+	border: 0.05vw solid rgba(173, 214, 247, 0.80);
+	cursor: pointer;
 }
 .master-point {
 	width: 12vw;
+	/*transition: filter 1s;*/
 }
-.master-point.first {
-}
-.master-point.middle {
-}
-.master-point.last {
+.master-point:hover {
+	filter: drop-shadow(0 0 6px  rgba(255, 255, 255, 0.4));
+	cursor: pointer;
 }
 
 .dates {

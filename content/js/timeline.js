@@ -42,7 +42,7 @@ $(function(){
 	}
 	
 	let timeline = {
-		
+		proceeding : false,
 		_parts: [],
 		partsInit() {
 			function loadXML (callback){
@@ -78,60 +78,74 @@ $(function(){
 		
 		_activePart: undefined,
 		points: {
-			load() {
+			load(callback) {
 				let element = timeline._activePart.element;
 				let points = timeline._activePart.points;
 				for(let q = 0; q < points.length; q++){
 					element.append(points[q].element);
 				}
-				element.children().fadeIn('fast');
+				element.children().fadeIn('fast').promise().done(callback);
+				timeline.proceeding = false;
 			},
-			clear() {
+			clear(callback) {
 				let element = timeline._activePart.element;
-				$('.point').fadeOut('fast');
-				element.children().fadeOut(()=>{
+				//$('.point').fadeOut('fast');
+				element.children().fadeOut().promise().done(()=>{
 					element.children().remove();
-					$('.story.container').animate({opacity: 0}, 500, ()=>{$('.story.text').empty();});
+					$('.story.container').animate({opacity: 0}, 500, ()=>{$('.story.text').empty().promise().done(callback);});
 				});
 			},
 			init() {
-				let element = timeline._activePart.element;
-				let points = timeline._activePart.points;
-				element.children().click(function() {
-					//console.log($(this).index());
-					let that = $(this);
-					let text = $('.story.text');
-					if($.trim(text.html())){
-						text.fadeOut(()=>{
-						text.empty().append(points[that.index()].content);
-						});
-						text.fadeIn();
-					}
-					
-					if ($('.story.container').css('opacity') === '0') {
-						text.empty().append(points[that.index()].content);
-						text.show();
-						$('.story.container').animate({opacity: 1}, 500);
-					}
-				});
+				if(timeline._activePart) {
+					let element = timeline._activePart.element;
+					let points = timeline._activePart.points;
+					element.children().click(function() {
+						//console.log($(this).index());
+						let that = $(this);
+						let text = $('.story.text');
+						console.log(timeline._activePart);
+						if($.trim(text.html())){
+							text.fadeOut(()=>{
+							text.empty().append(points[that.index()].content);
+							});
+							text.fadeIn();
+						}
+
+						if ($('.story.container').css('opacity') === '0') {
+							text.empty().append(points[that.index()].content);
+							text.show();
+							$('.story.container').animate({opacity: 1}, 500);
+						}
+					});
+				}
 			}
 		},
 		partActivate(index) {
-			let activePart = timeline._activePart;
-			if(activePart) {
-				activePart.flexGrow = 0;
-				timeline.points.clear();
-			}
-			if(activePart === timeline._parts[index]){
-				timeline._activePart = undefined;
-			}
-			else {
+			timeline.proceeding = true;
+			function partLoader(){
 				activePart = timeline._parts[index];
 				activePart.flexGrow = 1;
 				timeline._activePart = activePart;
-				timeline.points.load();
-				timeline.points.init();
+				timeline.points.load(timeline.points.init);
+				console.log('part loader');
 			}
+			let activePart = timeline._activePart;
+			if(activePart) {
+				if(activePart === timeline._parts[index]){
+					activePart.flexGrow = 0;
+					timeline.points.clear(()=>{timeline.proceeding = false;});
+					timeline._activePart = undefined;
+				}
+				else {
+					activePart.flexGrow = 0;
+					timeline.points.clear(partLoader);
+				}	
+			}
+			else {
+				partLoader();
+			}
+			
+			
 			
 		},
 		
@@ -143,8 +157,10 @@ $(function(){
 			}
 			
 			items.click((e)=>{
-				let that = $(e.currentTarget);
-				timeline.partActivate(that.index()/2);
+				if(!timeline.proceeding){
+					let that = $(e.currentTarget);
+					timeline.partActivate(that.index()/2);
+				}
 			});
 			
 			function hideDates() {
