@@ -5,16 +5,9 @@
 	<birth>
 		<!--story 1-->
 		<story>
-			<year>story one date</year>
+			<year></year>
 			<content>
-				story one content
-			</content>
-		</story>
-		<!--story 2-->
-		<story>
-			<year>story two date</year>
-			<content>
-				story two content
+				Mógłbym tu napisać kiedy miałem pierwszą styczność z komputerem, albo kiedy dostałem swój pierwszy komputer, ale zupełnie szczerze, pamiętam tylko, że było to dość wcześnie, a teraz przejdźmy do konkretów.
 			</content>
 		</story>
 	</birth>
@@ -22,9 +15,16 @@
 	<pdst>
 		<!--story 1-->
 		<story>
-			<year></year>
+			<year>2008</year>
 			<content>
-				
+				Był początek roku 2008 (lub koniec 2007, nie pamiętam dokładnie), jeden z moich kolegów poprosił mnie, abym pomógł mu w przenoszeniu artykułów z forum na nowo powstałą witrynę. HTML był wtedy dla mnie czymś zupełnie nowym, w związku z czym po krótkim wprowadzeniu i przydzieleniu dostępu do FTP, podekscytowany, ochoczo zabrałem się do pracy. Początkowo nie zagłębiałem się nawet szczególnie w żadne kursy, ucząc się metodą prób i błędów, czyli po prostu przez praktykę. Warto nadmienić, że w tym samym czasie miałem swoją pierwszą styczność z zaawansowanym oprogramowaniem do obróbki grafiki rastrowej.
+			</content>
+		</story>
+		<!--story 2-->
+		<story>
+			<year>2009</year>
+			<content>
+				Niecały rok później, rozentuzjazmowany poznaniem HTML, zgłębiałem informacje na temat różnych języków, chcąc wreszcie nauczyć się jakiegoś prawdziwego języka programowania. Po przejrzeniu wielu for internetowych mój wybór padł ostatecznie na Pascal’a. To w nim pisałem pierwsze konsolowe aplikacje, z nim spędziłem pierwsze nieprzespane noce na mojej programistycznej ścieżce.
 			</content>
 		</story>
 	</pdst>
@@ -34,7 +34,28 @@
 		<story>
 			<year></year>
 			<content>
-				
+				Czas gimnazjum był okresem, w który wreszcie mogłem w pełni wykazać się moimi niedawno nabytymi umiejętnościami. W między czasie rozwijałem znajomość grafiki rastrowej, poznałem xhtml i elementy js’a (typu onmouseover="menu2.src=’…’;" onmouseout="menu2.src=’…’;").
+			</content>
+		</story>
+		<!--story 2-->
+		<story>
+			<year></year>
+			<content>
+				To czego nauczyłem się w Pascal’u chciałem jakoś wykorzystać na stronach www, więc już w roku 2010 zacząłem uczyć się PHP.
+			</content>
+		</story>
+		<!--story 3-->
+		<story>
+			<year></year>
+			<content>
+				Poza byciem wyciąganym od czasu do czasu z lekcji przez nauczyciela informatyki (Patryk pomóż mi, bo nie pamiętam jak to się robi w GIMP’ie), wziąłem też udział w, można by powiedzieć, swojej pierwszej konferencji, jako przedstawiciel swojej szkoły w I Kongresie Młodych Internautów, organizowanym przez NASK, który miał na celu wypracowanie metod promowania bezpieczeństwa w intrenecie, wśród młodych ludzi.
+			</content>
+		</story>
+		<!--story 4-->
+		<story>
+			<year></year>
+			<content>
+				W wakacje, przed rozpoczęciem liceum poznałem elementarne podstawy C++, który w końcu miał stać się moim najważniejszym językiem na następne trzy lata.
 			</content>
 		</story>
 	</gim>
@@ -44,7 +65,21 @@
 		<story>
 			<year></year>
 			<content>
-				
+				W liceum, im bliżej matury, tym mniej czasu miałem niestety na rozwój swoich zainteresowań. Nadal rozwijałem się trochę w zakresie grafiki rastrowej, a także powoli zaczynałem poznawać grafikę wektorową, odświeżyłem także swoją wiedzę z zakresu HTML i PHP. 
+			</content>
+		</story>
+		<!--story 2-->
+		<story>
+			<year></year>
+			<content>
+				W drugiej klasie, znudzony szkolnymi podstawami pisania stron internetowych, postanowiłem utrudnić sobie pewien projekt, wykorzystując w nim bibliotekę jquery, której, co zabawne, uczyłem się mając właściwie bardzo niekompletną wiedzą z zakresu podstaw js.
+			</content>
+		</story>
+		<!--story 3-->
+		<story>
+			<year></year>
+			<content>
+				Później swój wolny czas poświęcałem już głównie językowi C++, jego bibliotece standardowej, podstawom algorytmiki i optymalnemu rozwiązywaniu problemów algorytmicznych.
 			</content>
 		</story>
 	</lic>
@@ -54,7 +89,21 @@
 		<story>
 			<year></year>
 			<content>
-				
+				Gdy zacząłem przerwane już obecnie studia, okazało się, że na jakiś czas będę musiał znacząco ograniczyć rozwój swoich zainteresowań. Pod koniec roku akademickiego czułem jednak coraz bardziej, że czegoś mi brakuje. Czego dokładnie? Programowania. Brakowało mi tej ciągłej stymulacji, stawiania sobie nowych wyzwań, satysfakcji z rozwoju i możliwości natychmiastowego wykorzystania nowej wiedzy, co w mniejszym lub większym stopniu dawał mi dowolny język programowania.
+			</content>
+		</story>
+		<!--story 2-->
+		<story>
+			<year></year>
+			<content>
+				Postanowiłem więc zrobić sobie tydzień przerwy, potem drugi, by w końcu podjąć decyzję, że nie zamierzam dalej kontynuować tych studiów. Ten dni spędziłem w bibliotece, w parku z czytnikiem w ręku, a po powrocie do domu przed komputerem, przekuwając zdobytą wiedzę w praktykę. W tym czasie rozwijałem się głównie w zakresie JavaScript oraz biblioteki Jquery, zdecydowałem się wreszcie porządnie nauczyć tego języka, ponieważ uważam znajomość js’a za wiedzę bardzo praktyczną w życiu codziennym, pozwalającą tworzyć user script’y, czy rozszerzenia do przeglądarek oraz bardzo szybko implementować aplikacje użytkowe. Po tych dwóch tygodniach wiedziałem już, że tego właśnie potrzebowałem. Postanowiłem, że tak długo, jak będzie to możliwe, nie będę porzucał programowania, bo choć zawsze miałem wiele zainteresowań, to właśnie to okazało jedną z najważniejszych rzeczy, które napędzały mnie przez ostatnie dziesięć lat;
+			</content>
+		</story>
+		<!--story 3-->
+		<story>
+			<year></year>
+			<content>
+				Niedawno poznałem też scrum’a i git’a, który, muszę przyznać, zdecydowanie pomaga uporządkować rozwój kodu.
 			</content>
 		</story>
 	</uni>
