@@ -127,6 +127,12 @@ header .name.timeline.sn{
 .hright.row2 img:last-of-type {
 	margin-right: 0;
 }
+.timeline.hright img:not(.clickable) {
+	opacity: 0.8;
+}
+.clickable:hover {
+	filter: drop-shadow(0px 0px 3px rgba(53,71,140,0.6));
+}
 /*content*/
 #content {
 	background : #4E7AC6;
