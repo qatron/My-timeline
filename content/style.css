@@ -161,7 +161,8 @@ header .name.timeline.sn{
 	font-size: 5vw;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	letter-spacing: 0.3vh;
+	letter-spacing: 0.05vw;
+	
 }
 #content .arrow {
 	width: auto;
@@ -184,4 +185,26 @@ footer span {
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2.5vh;
+}
+
+footer .mobile {
+	display: none;
+}
+
+footer .mobile :link {
+	color: rgba(53,71,140,1.00);
+	text-decoration: none;
+}
+footer .mobile :visited {
+	color: rgba(78, 122, 198, 1);
+}
+/*mobile*/
+
+@media screen and (max-aspect-ratio: 97/100) {
+	.timeline.hright {
+		display: none !important;
+	}
+	footer .mobile {
+		display: block !important;
+	}
 }

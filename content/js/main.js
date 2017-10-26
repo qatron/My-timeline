@@ -1,10 +1,6 @@
 // JavaScript Document
 $(function(){
 	"use strict";
-	//Forces landscape orientation when it's possible. Bassicaly for mobile devices.
-	screen.orientation.lock('landscape').catch(()=>{
-		console.log('Landscape orientation lock impossible.');
-	});
 	
 	//Content loader
 	//with fade off of old content and fade in of new content.
