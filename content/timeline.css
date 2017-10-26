@@ -105,8 +105,15 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 120%;
 	text-align: justify;
+	color: #0C1D3B;
 	/*
 	width: 50vw;
 	height: 20vh;
 	*/
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+	.story.text {
+		font-size: 2.3vh;
+	}
 }
